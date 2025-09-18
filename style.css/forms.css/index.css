@@ -1,0 +1,55 @@
+@import url(../forms.css/fields.css/);
+@import url(../forms.css/fields.css/sobre-evento.css);
+
+
+
+.title-form {
+    margin: 80px 130px 0 130px;
+    font: var(--heading-md);
+    color: var(--text-heading);
+}
+
+form {
+    margin: 0 130px;
+}
+
+fieldset {
+    border: none;
+    margin-top: 48px;
+}
+
+legend {
+    margin-bottom: 24px;
+    font: var(--heading-sm);
+    color: var(--text-heading);
+}
+
+label {
+    font: var(--body-sm);
+    color: var(--text-body);
+    display: block;
+    margin: 16px 0 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+    border-radius: 8px;
+    width: 100%;
+    height: 48px;
+
+    padding: 16px 13px 16px 13px;
+    color: var(--input-placeholder);
+    font: var(--body-md);
+    color: var(--input-placeholder);
+    
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--brand-light);
+    border: 1px solid var(--brand-light);   
+}

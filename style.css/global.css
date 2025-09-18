@@ -49,5 +49,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1E1E1E;
+    background-color: black;
+}
+
+main {
+    background-color: var(--shape-body);
+    margin-right: 20px;
+    border-radius: 12px;
 }
