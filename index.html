@@ -33,7 +33,7 @@
         <main class="main-container">
             <h1 class="title-form">Crie seu convite</h1>
             
-            <form enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
                 <fieldset class="evento-sobre">
                     <legend>Sobre o evento</legend>
                     <div class="field-wrapper">
@@ -87,17 +87,17 @@
                     <div class="field-wrapper">
                         <label>Cor principal</label>
                         <div class="color-options">
-                            <div class="color-dot" style="background-color: #59B2FF;"></div>
-                            <div class="color-dot" style="background-color: #6A59FF;"></div>
-                            <div class="color-dot" style="background-color: #B259FF"></div>
-                            <div class="color-dot" style="background-color: #FF59F9;"></div>
-                            <div class="color-dot" style="background-color: #FF598B;"></div>
-                            <div class="color-dot" style="background-color: #FF5959;"></div>
-                            <div class="color-dot" style="background-color: #FF8B59;"></div>
-                            <div class="color-dot" style="background-color: #FFCD59;"></div>
-                            <div class="color-dot" style="background-color: #E1FF59;"></div>
-                            <div class="color-dot" style="background-color: #59FF91;"></div>
-                            <div class="color-dot" style="background-color: #59FFF9;"></div> 
+                            <input type="radio" name="color" id="color-1" class="color-radio" style="background-color: #59B2FF;" checked>
+                            <input type="radio" name="color" id="color-2" class="color-radio" style="background-color: #6A59FF;">
+                            <input type="radio" name="color" id="color-3" class="color-radio" style="background-color: #B259FF;">
+                            <input type="radio" name="color" id="color-4" class="color-radio" style="background-color: #FF59F9;">
+                            <input type="radio" name="color" id="color-5" class="color-radio" style="background-color: #FF598B;">
+                            <input type="radio" name="color" id="color-6" class="color-radio" style="background-color: #FF5959;">
+                            <input type="radio" name="color" id="color-7" class="color-radio" style="background-color: #FF8B59;">
+                            <input type="radio" name="color" id="color-8" class="color-radio" style="background-color: #FFCD59;">
+                            <input type="radio" name="color" id="color-9" class="color-radio" style="background-color: #E1FF59;">
+                            <input type="radio" name="color" id="color-10" class="color-radio" style="background-color: #59FF91;">
+                            <input type="radio" name="color" id="color-11" class="color-radio" style="background-color:#59FFF9;">
                         </div>
                     </div>
 
@@ -194,13 +194,13 @@
                         <div class="field-wrapper">
                             <label>Estilo</label>
                             <div class="style-options">
-                                <div class="style-radio">
-                                    <input type="radio" name="style-mode" id="style-light" checked>
-                                    <label for="style-light">Claro</label>
+                                <div class="style-checkbox">
+                                    <input type="checkbox" id="darkmode" hidden>
+                                    <label for="darkmode" class="darkmode-btn" title="Alternar dark mode">Caro</label>
                                 </div>
-                                <div class="style-radio">
-                                    <input type="radio" name="style-mode" id="style-dark">
-                                    <label for="style-dark">Escuro</label>
+                                <div class="style-checkbox">
+                                   <input type="checkbox" id="darkmode" hidden>
+                                    <label for="darkmode" class="darkmode-btn" title="Alternar dark mode">Escuro</label>
                                 </div>
                             </div>
                         </div>
@@ -217,12 +217,14 @@
                 
                 <fieldset class="contato-info">
                     <legend>Dados para contato</legend>
-                    <div class="field-wrapper">
+                    <div class="input-error">
                         <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="Nome completo">
+                        <input type="text" name="name" id="name" required placeholder="Nome completo">
+                    
+                    
+                        <img src="assets/icons/circle-alert.svg" alt="ícone de alerta vermelho">
+                        <span class="required-field">Campo obrigatório</span>
                     </div>
-                    <span class="required-field">Campo obrigatório</span>
-
                     <div class="contact-grid">
                         <div class="field-wrapper">
                             <label for="email">E-mail</label>
@@ -235,18 +237,19 @@
                     </div>
                 </fieldset>
 
-                    <div class="terms-and-conditions">
+                <div class="terms-and-conditions">
+                    <div class="divider"></div>
                     <div class="checkbox-option">
                         <input type="checkbox" id="agree-terms" checked>
-                        <label for="agree-terms">Li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span></label>
+                        <p>Li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span></p>
                     </div>
                     <div class="checkbox-option">
                         <input type="checkbox" id="receive-updates">
-                        <label for="receive-updates">Aceito receber atualizações e promoções por e-mail</label>
+                        <p>Aceito receber atualizações e promoções por e-mail</p>
                     </div>
                     <div class="checkbox-option">
                         <input type="checkbox" id="receive-sms">
-                        <label for="receive-sms">Aceito receber atualizações e promoções por SMS</label>
+                        <p>Aceito receber atualizações e promoções por SMS</p>
                     </div>
                 </div>
                 <div class="btn">

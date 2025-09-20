@@ -1,0 +1,36 @@
+.contato-info > legend {
+  padding-left: 2.25rem;
+  background-color: var(--place-holder);
+  background: url(/assets/icons/contact.svg)
+  center
+  left
+  no-repeat;
+}
+
+
+.terms-and-conditions {
+    margin-top: 3rem;
+    
+
+    & .divider {
+        border-top: 1px solid var(--input-stroke);
+        margin-bottom: 2.5rem;
+    }
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .25rem;
+
+    & p {
+        font: var(--body-sm);
+        color: var(--text-body);
+
+        & span {
+            text-decoration: underline;
+            color: var(--brand-light);
+        }
+    }
+}

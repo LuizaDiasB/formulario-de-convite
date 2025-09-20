@@ -1,0 +1,109 @@
+.personalizacao > legend {
+  padding-left: 2.25rem;
+  background-color: var(--place-holder);
+  background: url(/assets/icons/paintbrush-vertical.svg)
+  center
+  left
+  no-repeat;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .625rem;
+  margin-bottom: 1.75rem;
+}
+
+.color-radio {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border: .5rem solid var(--shape-button);
+}
+
+.color-dot:focus {
+  border-color: .5rem solid var(--brand-light);
+}
+
+/*== tema do evento ==*/
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: .5rem;
+  margin-bottom: 1.75rem;
+}
+
+.card {
+  width: 8.375rem;
+  height: 6.4375rem;
+  border-radius: .5rem;
+  background-color: var(--shape-button);
+  order: 1px solid transparent;
+
+  & img {
+    padding: .25rem;
+    }
+
+  & p {
+    display: flex;
+    justify-content: center;
+    font: var(--body-sm);
+    color: var(--text-heading);
+  }
+}
+
+/*== dark mode ==*/
+.style-fields {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.style-options {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  width: 11rem;
+  
+}
+
+.style-options label {
+  padding: 0.5rem 1rem;
+  background: var(--input-base);
+  color: var(--text-heading);
+  border-radius: 999px;
+  width: 4rem;
+  height: 2rem;
+
+  }
+
+/*== foto de capa ==*/
+.cover-photo-upload {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.select-photo-btn {
+  background: url(/assets/icons/upload.svg)
+  center
+  left .75rem
+  no-repeat;
+    
+  width: 7.4375rem;
+  height: 2.5rem;
+  border: none;
+  padding: .65625rem .75rem .65625rem 2.25rem;
+  background-color: var(--shape-button);
+  color: var(--text-heading);
+  border-radius: .5rem;
+  font: var(--body-sm);
+  font-weight: 600;
+}
+
+.cover-photo-upload p {
+    font: var(--body-md);
+    color: var(--input-placeholder);
+
+}
