@@ -45,14 +45,6 @@
     --body-xs: .75rem var(--font-family-open);
 }
 
-body {  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    overflow: hidden;
-}
-
 main {
     background-color: var(--shape-body);
     margin-right: 1.25rem;

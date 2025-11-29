@@ -58,18 +58,37 @@
   margin: .5rem;
 }
 
-.type-option input[type="radio"]:checked + svg {
+/* Ícone padrão sempre visível */
+.type-option svg.icon-default {
+  display: block;
+}
+
+/* Ícone verificado oculto por padrão */
+.type-option svg.icon-checked {
+  display: none;
+}
+
+/* Quando o rádio está marcado */
+.type-option input[type="radio"]:checked + svg.icon-default {
+  display: none;
+}
+
+.type-option input[type="radio"]:checked + svg.icon-default + svg.icon-checked {
+  display: block;
+}
+
+/* Colorir o ícone padrão quando presencial estiver selecionado */
+#type-presencial:checked + svg.icon-default {
   fill: var(--brand-light);
 }
 
+#type-presencial:checked + svg.icon-default path {
+  fill: var(--brand-light);
+}
+
+/* Mostrar label em destaque quando selecionado */
 .type-option input[type="radio"]:checked + svg + label {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: var(--text-heading);  
 }
-
-.type-option input[type="radio"]:checked + svg {
-
-  background-color: var(--brand-light);
-}
-
